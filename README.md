@@ -28,3 +28,32 @@ The training images are 2940 and the test images are 1260.
 Frames             |  Face (BoundingBox)
 :-------------------------:|:-------------------------:
  <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BillGates3S456.jpg"  width="250" height="250">  |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/img636.jpg"  width="250" height="250"> 
+ 
+## Libraries
+The main libraries for ML application used for this project are: 
+1) Tensorflow 1.4
+2) Keras 2.1.2
+3) H5PY 2.8
+
+## How to Use
+
+As described previously the first step is building the dataset. The dataset rappresented by images has been obtained by video. 
+Let's suppose to download video: TaylorSwift interview and making the video in respectly folder.
+```
+mkdir VideoDataset
+```
+The second Step, run the Python Script: 
+
+```
+python extract_frames.py
+```
+This script allow to obtain frames for each video and place pictures obtained in a new folder. 
+For example: given a path that contains video: C:/.../.../VideoDataset
+the script will split the name video "taylorSwift.mp4" in "taylorSwift" and create a folder with same name. Succefully the script will save in while success the frames in the folder taylorswift and so on for the rest of videos. 
+
+This fase will be followed by another script: crop faces. This faces will make a bounding box of each frames places in each folder previously cited. 
+In this case will be run: 
+```
+python crop.py
+```
+The crop function will apply the p viola and m jones algorithm for obtain only faces. The script needs the path of each folder that contains frames and it will making another folder with cropped faces. 
