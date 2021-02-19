@@ -1,4 +1,4 @@
-# Am-I-a-celebrity-
+# Am I a celebrity?
 The ironic title is an excuse to introduce a problem and show the results.
 As can be seen from the title, in this problem, we want to address a very important target in the field of computer vision and artificial intelligence: Visual Recognition.
 The main idea is based on a set of data (people's faces) and recognize their face.
