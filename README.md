@@ -57,3 +57,32 @@ In this case will be run:
 python crop.py
 ```
 The crop function will apply the p viola and m jones algorithm for obtain only faces. The script needs the path of each folder that contains frames and it will making another folder with cropped faces. 
+
+After this step we will obtain N folder, where for each folder contains copped faces. It will be necessary split the folder in train set and test set (70% and 30%). 
+
+At the end, it will be possible run the training. The first time it will be necessary save the images in the numpy array or h5df. 
+
+```python
+path_data_train = 'dataset_costruito_me/train'
+X_train,Y_train = get_data(path_data_train)
+
+path_data_test = 'dataset_costruito_me/test'
+X_test,Y_test = get_data(path_data_test)
+```
+After that, it will necessary save x_train, y_train, x_test and y_test: 
+```python
+f = h5py.File('X_train_my.hdf5', 'w')
+X_train = f.create_dataset("train_X", data=X_train)
+
+f = h5py.File('Y_train_my.hdf5', 'w')
+Y_train = f.create_dataset("train_Y", data=Y_train)
+
+f = h5py.File('X_test_my.hdf5', 'w')
+X_test = f.create_dataset("test_X", data=X_test)
+f = h5py.File('Y_test_my.hdf5', 'w')
+Y_test = f.create_dataset("test_Y", data=Y_test)
+```
+
+After that it will possibile to read data from .hdf5 files withot read every time from the path. 
+
+
