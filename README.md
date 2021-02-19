@@ -85,4 +85,22 @@ Y_test = f.create_dataset("test_Y", data=Y_test)
 
 After that it will possibile to read data from .hdf5 files withot read every time from the path. 
 
+Run the training:
 
+
+```
+python training_odenet_nn.py
+```
+
+## Results
+The results obtained are very interesting using a odenet neural network: 
+1) Accuracy
+2) Validation Acc:
+
+## Evaluation 
+
+The evaluation test consists to load the model (detection_person_model.h5) obtained from training and try to recognize images never seen before from the neural network. This phase will be computed by NN in the followed step: 
+1) WebCam of pc will be turned on 
+2) The SW will take some pictures and save it in homedir. 
+3) The SW will load the pictures and supply them to the trained neural network model.
+4) Output served
