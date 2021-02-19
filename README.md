@@ -24,3 +24,7 @@ The Odenet neural network, recently in the field of artificial intelligence and 
 As mentioned above, the image dataset was obtained from videos taken from Youtube for each celebrity.
 The training was therefore performed on data sets represented by images and the latter were divided into 70% training images and 30% test images.
 The training images are 2940 and the test images are 1260.
+
+Frames             |  Face 
+:-------------------------:|:-------------------------:
+ <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BillGates3S456.jpg"  width="120" height="120">  |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/img636.jpg"  width="120" height="120"> 
