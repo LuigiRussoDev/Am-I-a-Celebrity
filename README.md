@@ -94,8 +94,21 @@ python training_odenet_nn.py
 
 ## Results
 The results obtained are very interesting using a odenet neural network: 
-1) Accuracy
-2) Validation Acc:
+1) Val Accuracy: 0.97
+2) Val Loss: 0.17
+
+Results | #Precision | #Recall | #f1-score | #support 
+--- | --- | --- | --- |--- 
+ArianaGrande | 1.00 | 0.98 | 0.99 | 1260
+BillGates | 1.00 | 0.86 | 0.92 | 1260
+DonaldTrump | 0.99 | 1.00 | 1.00 | 1260
+EmmaStone | 0.97 | 0.97 | 0.97 | 1260
+SelenaGomez | 0.92 | 0.99 | 0.96 | 1260
+TaylorSwift | 0.97 | 0.97 | 0.97 | 1260
+LuigiRusso | 0.93 | 1.00 | 0.97 | 1260
+
+![](imgs/plot_accuracy.png)
+![](imgs/confusion_matrix_big.png)
 
 ## Evaluation 
 
