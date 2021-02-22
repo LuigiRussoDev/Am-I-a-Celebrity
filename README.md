@@ -5,6 +5,10 @@ The main idea is based on a set of data (people's faces) and recognize their fac
 The resolution of the task, features a set of Celebrity images data set (The best way to obtain images easily available from the internet).
 The dataset was obtained through youtube videos for each celebrity. The celebrities in question are 6: ArianaGrande, Bill Gates, Donald Trump, Selena Gomez, Taylor Swift, Emma Stome and Luigi Russo (myself). 
 
+## The Method 
+For this Project I wanted to use an innovative computational approach for features Extraction based on computation and evaluation of ODE (Ordinary Differential Equations). In particulat i wanted to use as neural network a ODE-NET (https://arxiv.org/pdf/1806.07366.pdf)
+The ode-net can be considered a different way or approach for computation and evaluations the features, in particular we consider an odenet a deep neural network where the concept of "deep" isn't the number of layer (for deep), but the deep concept is based in Time! The evaluations in time based on specifically method for ODE Resolution (ex: Euler, Runge Kutta, etc...). 
+![](imgs/ResOdeFaceDetection.png)
 
 ## Preprocessing
 The preprocessing phase was very important in order to obtain a valid image dataset.
@@ -42,6 +46,11 @@ To install the main libraries I used pip as package manager for Python. In parti
 ```
 python3.6 -m pip install tensorflow==1.4
 ```
+
+## Training Configuration
+1) Epoch: 70
+2) Optimizer: Sgd (Gradient descent with momentum 0.9 and Nesterov False)
+3) Batch Size: 32
 
 
 ## How to Use
