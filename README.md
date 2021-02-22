@@ -37,7 +37,7 @@ The training images are 2940 and the test images are 1260.
 
 Frames             | BoundingBox | Face
 :-------------------------:|:-------------------------: |:-------------------------:
- <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BillGates3S456.jpg"  width="250" height="250">  |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BoundingBoxFace.png"  width="250" height="250"> |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/img636.jpg"  width="250" height="250"> 
+ <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BillGates3S456.jpg"  width="250" height="250">  |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BoundingBoxFace.jpg"  width="250" height="250"> |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/img636.jpg"  width="250" height="250"> 
  
 ## Libraries
 The main libraries for ML application used for this project are: 
