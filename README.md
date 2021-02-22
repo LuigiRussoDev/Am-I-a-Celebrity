@@ -10,6 +10,10 @@ For this Project I wanted to use an innovative computational approach for featur
 The ode-net can be considered a different way or approach for computation and evaluations the features, in particular we consider an odenet a deep neural network where the concept of "deep" isn't the number of layer (for deep), but the deep concept is based in Time! The evaluations in time based on specifically method for ODE Resolution (ex: Euler, Runge Kutta, etc...). 
 ![](imgs/ResOdeFaceDetection.png)
 
+The image show a basic example of how a neural network in problem of classification works. 
+In particular, for this project  I use the second cases (Res-Ode). I wanted to use a Res-Ode because I consider a ResNet a good approch for preprocess the images and gives the features extracted to ODE block. 
+![](imgs/Odeblock.jpg)
+In partical I want to compute the approximation at initial state defined as h(t_0) and then compute the function f into hidden state "h" at time t(0). In other words h(t0).
 ## Preprocessing
 The preprocessing phase was very important in order to obtain a valid image dataset.
 The images were obtained from videos taken from youtube, where each video was represented by a celebrity. Generally the videos taken referred to interviews in order to give more emphasis to the structure of the video.
