@@ -35,9 +35,9 @@ As mentioned above, the image dataset was obtained from videos taken from Youtub
 The training was therefore performed on data sets represented by images and the latter were divided into 70% training images and 30% test images.
 The training images are 2940 and the test images are 1260.
 
-Frames             |  Face (BoundingBox)
-:-------------------------:|:-------------------------:
- <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BillGates3S456.jpg"  width="250" height="250">  |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/img636.jpg"  width="250" height="250"> 
+Frames             | BoundingBox | Face
+:-------------------------:|:-------------------------: |:-------------------------:
+ <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BillGates3S456.jpg"  width="250" height="250">  |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/BoundingBoxFace.png"  width="250" height="250"> |   <img src="https://github.com/LuigiRussoDev/Am-I-a-Celebrity/blob/main/imgs/img636.jpg"  width="250" height="250"> 
  
 ## Libraries
 The main libraries for ML application used for this project are: 
