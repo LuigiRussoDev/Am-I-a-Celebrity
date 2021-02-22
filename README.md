@@ -1,9 +1,10 @@
 # Am I a celebrity?
 The ironic title is an excuse to introduce a problem and show the results.
-As can be seen from the title, in this problem, we want to address a very important target in the field of computer vision and artificial intelligence: Visual Recognition.
+As can be seen from the title, in this problem, I want to address a very important target in the field of computer vision and artificial intelligence: Visual Recognition.
 The main idea is based on a set of data (people's faces) and recognize their face.
 The resolution of the task, features a set of Celebrity images data set (The best way to obtain images easily available from the internet).
-The dataset was obtained through youtube videos for each celebrity. The celebrities in question are 6: ArianaGrande, Bill Gates, Donald Trump, Selena Gomez, Taylor Swift, Emma Stome and Luigi Russo (myself).
+The dataset was obtained through youtube videos for each celebrity. The celebrities in question are 6: ArianaGrande, Bill Gates, Donald Trump, Selena Gomez, Taylor Swift, Emma Stome and Luigi Russo (myself). 
+
 
 ## Preprocessing
 The preprocessing phase was very important in order to obtain a valid image dataset.
@@ -34,6 +35,14 @@ The main libraries for ML application used for this project are:
 1) Tensorflow 1.4
 2) Keras 2.1.2
 3) H5PY 2.8
+4) Matplotlib latest
+5) Scikit-learn
+
+To install the main libraries I used pip as package manager for Python. In particular Python v3.6 has been used and then the command for installing: 
+```
+python3.6 -m pip install tensorflow==1.4
+```
+
 
 ## How to Use
 
@@ -117,3 +126,12 @@ The evaluation test consists to load the model (detection_person_model.h5) obtai
 2) The SW will take some pictures and save it in homedir. 
 3) The SW will load the pictures and supply them to the trained neural network model.
 4) Output served
+
+## Next Goal
+As descrived before, the dataset was obtained from video interview. A video interview can been seen as a sequences of frames that describes (on axes of time) a videoclip. 
+For this Project I used as Neural Network a classic Deep Learning Approch based on ODE Net neural Netorkw. The method is based to extract features in deep time (t) computing the problem f(x) => Layers , using Euler Method as solver for function approximation. 
+The next goal, is based to show the result using ConvLSTM2D approach. The main reason for using this approach consist to describe a computational sequences of images in time consecutive, overlapping of 2 before two frames. 
+
+
+## Contact
+For any doubt or issues, please contact me at: luigi.russosc@gmail.com
