@@ -36,8 +36,9 @@ def get_data(folder):
 
       for image_filename in tqdm(os.listdir(folder +"/" + folderName)):
         #print("Nome Immagine: ",image_filename)
-        #img_file = cv2.imread(folder + '/' + folderName + '/' + image_filename)
-        img_file = imageio.imread(str(folder + '/' + folderName + '/' + image_filename))
+        img_file = cv2.imread(folder + '/' + folderName + '/' + image_filename)
+        #img_file = cv2.cvtColor(img_file, cv2.COLOR_BGR2GRAY)
+        #img_file = imageio.imread(str(folder + '/' + folderName + '/' + image_filename))
         if img_file is not None:
           img_size=(128,128,3)
           img_file = skimage.transform.resize(img_file, img_size)

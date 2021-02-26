@@ -1,18 +1,26 @@
 import glob
 import cv2
 import os
+
+import pca as pca
 import tensorflow as tf
 import h5py as h5py
 import numpy as np
 import scipy
 import keras
-from keras.layers import Conv2D,MaxPooling2D,BatchNormalization,Input,Flatten,Dense,AveragePooling2D,Activation,Add,add
+
+from keras.layers import ZeroPadding2D, Conv2D,MaxPooling2D,BatchNormalization,Input,Flatten,Dense,Dropout,AveragePooling2D,Activation,Add,add
 from keras import optimizers
-from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import np_utils
 from keras.models import Model
 from keras.layers import Layer
-
+from keras.preprocessing.image import ImageDataGenerator
+from sklearn.decomposition import PCA
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import scipy.misc
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
 from defs import *
 
 #os.environ["CUDA_VISIBLE_DEVICES"]="1"
@@ -138,16 +146,16 @@ print("Number of classes: ",num_classes)
 
 
 # normalize the data
-X_train = X_train.astype('float32') / 255
+'''X_train = X_train.astype('float32') / 255
 X_test = X_test.astype('float32') / 255
 
 X_train = X_train - X_train.mean()
 X_test = X_test - X_test.mean()
 
 train_x = X_train / X_train.std(axis=0)
-test_x = X_test / X_test.std(axis=0)
+test_x = X_test / X_test.std(axis=0)'''
 
-datagen = ImageDataGenerator(
+'''datagen = ImageDataGenerator(
     rotation_range=20,
     zoom_range=0.15,
     width_shift_range=0.2,
@@ -156,14 +164,14 @@ datagen = ImageDataGenerator(
     horizontal_flip=True,
     fill_mode="nearest")
 
-datagen.fit(train_x,augment=True)
+datagen.fit(train_x,augment=True)'''
 
 y_train = np_utils.to_categorical(y_train, num_classes)
 y_test = np_utils.to_categorical(y_test, num_classes)
 
 w,h,c = 128,128,3
-epochs = 65
-bs = 16
+epochs = 30
+bs = 32
 sgd = optimizers.SGD(lr=0.0001, momentum=0.9, decay=0.0, nesterov=False)
 input_shape = (w,h,c)
 model = Model_NN(input_shape)
@@ -213,4 +221,4 @@ plot_confusion_matrix(confusion_mtx, classes=target_names)
 print('Test loss:', accuracy[0])
 print('Test accuracy:', accuracy[1])
 
-model.save("detection_person_model.h5")
+model.save_weights("detection_person_model.h5")
