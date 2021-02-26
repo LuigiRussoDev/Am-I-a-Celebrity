@@ -141,6 +141,8 @@ The evaluation test consists to load the model (detection_person_model.h5) obtai
 3) The SW will load the pictures and supply them to the trained neural network model.
 4) Output served
 
+![caption](LuigiRussoPrediction.gif)
+
 ## Next Goal
 As descrived before, the dataset was obtained from video interview. A video interview can been seen as a sequences of frames that describes (on axes of time) a videoclip. 
 For this Project I used as Neural Network a classic Deep Learning Approch based on ODE Net neural Netorkw. The method is based to extract features in deep time (t) computing the problem f(x) => Layers , using Euler Method as solver for function approximation. 
