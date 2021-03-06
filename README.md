@@ -1,12 +1,12 @@
 # Am I a celebrity?
-The ironic title is an excuse to introduce a problem and show the results.
+The ironic title is an excuse to introduce a problem, solve and show the results.
 As can be seen from the title, in this problem, I want to address a very important target in the field of computer vision and artificial intelligence: Visual Recognition.
 The main idea is based on a set of data (people's faces) and recognize their face.
 The resolution of the task, features a set of Celebrity images data set (The best way to obtain images easily available from the internet).
 The dataset was obtained through youtube videos for each celebrity. The celebrities in question are 6: ArianaGrande, Bill Gates, Donald Trump, Selena Gomez, Taylor Swift, Emma Stome and Luigi Russo (myself). 
 
 ## The Method 
-For this Project I wanted to use an innovative computational approach for features Extraction based on computation and evaluation of ODE (Ordinary Differential Equations). In particulat i wanted to use as neural network a ODE-NET (https://arxiv.org/pdf/1806.07366.pdf)
+For this Project I wanted to use an innovative computational approach for features Extraction based on computation and evaluation of ODE (Ordinary Differential Equations). In particular i wanted to use as neural network a ODE-NET (https://arxiv.org/pdf/1806.07366.pdf)
 The ode-net can be considered a different way or approach for computation and evaluations the features, in particular we consider an odenet a deep neural network where the concept of "deep" isn't the number of layer (for deep), but the deep concept is based in Time! The evaluations in time based on specifically method for ODE Resolution (ex: Euler, Runge Kutta, etc...). 
 ![](imgs/ResOdeFaceDetection.png)
 
@@ -20,7 +20,7 @@ The preprocessing phase was very important in order to obtain a valid image data
 The images were obtained from videos taken from youtube, where each video was represented by a celebrity. Generally the videos taken referred to interviews in order to give more emphasis to the structure of the video.
 For each video, the following steps were performed:
 1) Each Video: TaylorSwift.mp4 consisting of 10/15 min has been converted into frames of images, so as to obtain the i-th folder represented only by Taylor images. And so on..
-2) After obtaining the 6 classes, where each class is represented by N images, a boundingbox algorithm has been applied to each folder.
+2) After obtaining the 6 classes, where each class is represented by N images in frames, a boundingbox algorithm has been applied to each folder.
 The BoundingBox algorithm is like a function where given an image with a face, it must output only the face.
 The bounding box algorithm was performed for each folder in order to obtain another folder with all the extractions of the faces.
 
